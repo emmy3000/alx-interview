@@ -17,7 +17,7 @@ This Python module contains a function to determine if all the boxes in a list c
 Example usage:
 
 ```python
-from box_unlocker import canUnlockAll
+from lockboxes import canUnlockAll
 
 # All boxes can be unlocked because each box contains keys to other boxes.
 boxes = [[1, 2], [3], [0], []]
