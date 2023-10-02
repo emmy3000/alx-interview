@@ -19,7 +19,6 @@ To use the Pascal's triangle generator in your main module, import it as follows
 ```python
 from pascal_triangle_generator import generate_pascal_triangle
 
-from pascal_triangle_generator import generate_pascal_triangle
 
 def main():
     triangle = generate_pascal_triangle(5)
