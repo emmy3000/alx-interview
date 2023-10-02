@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This script defines a function to generate Pascal's triangle and a printing function.
+This script defines a function to generate Pascal's triangle.
 """
 
 
