@@ -29,3 +29,5 @@ Min # of operations to reach 12 char: 7
 ```
 
 The `minOperations` function should correctly determine the minimum number of operations needed to achieve the specified number of 'H' characters and return the result.
+
+### 
