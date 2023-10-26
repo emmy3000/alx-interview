@@ -2,6 +2,7 @@
 
 This repository contains a Python script to determine if a given dataset represents a valid UTF-8 encoding. UTF-8 is a character encoding standard that is widely used in computing to represent text in various languages. Ensuring the validity of UTF-8 encoded data is crucial when processing text to avoid errors and maintain data integrity.
 
+
 ## Table of Contents
 - [Overview](#overview)
 - [Understanding UTF-8 Encoding](#understanding-utf-8-encoding)
