@@ -41,7 +41,7 @@ The `validUTF8` function checks if a given list of integers represents valid UTF
 
 ### Prerequisites
 
-- Python 3.7
+- Python 3.4.3
 
 ### Installation
 
