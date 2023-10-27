@@ -1,41 +1,48 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
-Script used for determining if a given data set
-represents a valid UTF-8 encoding.
+UTF-8 Encoding Validator
 """
 
 
 def validUTF8(data):
     """
-    Determine if a given data set represents
-    a valid UTF-8 encoding.
+    Determines if a given dataset represents a valid UTF-8 encoding.
 
     Args:
-        data (list of int): A list of integers where each integer
-        represents 1 byte of data.
+    data (List[int]): A list of integers where each integer
+    represents 1 byte of data.
 
     Returns:
-        bool: True if data is a valid UTF-8 encoding, else False.
+    bool: True if data is a valid UTF-8 encoding, else False.
     """
-    bytes_to_follow = 0
+    num_bytes = 0
 
-    for num in data:
-        binary_representation = format(num, '08b')
+    for char_d in data:
+        byte = char_d & 0xff
 
-        if bytes_to_follow == 0:
-            if binary_representation[0] == '0':
-                bytes_to_follow = 0
-            elif binary_representation[0] == '1':
-                if binary_representation.count('1') >= 2:
-                    bytes_to_follow = binary_representation.index('0')
-                    if bytes_to_follow == 1 or bytes_to_follow > 4:
-                        return False
-                else:
-                    return False
-        else:
-            if binary_representation[:2] == '10':
-                bytes_to_follow -= 1
-            else:
+        if num_bytes == 0:
+            if byte < 0x80:
+                # Single-byte character (0xxxxxxx)
+                num_bytes = 0
+            elif byte < 0xC0:
+                # Invalid start byte (10xxxxxx)
                 return False
+            elif byte < 0xE0:
+                # Two-byte character (110xxxxx)
+                num_bytes = 1
+            elif byte < 0xF0:
+                # Three-byte character (1110xxxx)
+                num_bytes = 2
+            elif byte < 0xF8:
+                # Four-byte character (11110xxx)
+                num_bytes = 3
+            else:
+                # Invalid start byte (11111xxx)
+                return False
+        else:
+            if byte < 0x80 or byte >= 0xC0:
+                # Invalid continuation byte (not 10xxxxxx)
+                return False
+            num_bytes -= 1
 
-    return bytes_to_follow == 0
+    return num_bytes == 0
