@@ -40,7 +40,7 @@ cd 0x06-star-wars-api
 **OUTPUT**
 - The command will output the names of characters from the movie with ID 3.
 ```shell
-$ ./0-starwars_characters.js "Return of the Jedi"
+$ ./0-starwars_characters.js 3
 Luke Skywalker
 C-3PO
 R2-D2
