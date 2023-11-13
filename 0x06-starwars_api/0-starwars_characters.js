@@ -2,13 +2,13 @@
 const util = require('util');
 const request = util.promisify(require('request'));
 
-async function getFilmCharacters(filmId) {
+async function getFilmCharacters (filmId) {
   const filmUrl = `https://swapi-api.hbtn.io/api/films/${filmId}`;
-  
+
   try {
     const response = await request(filmUrl);
     const film = JSON.parse(response.body);
-    
+
     for (const characterUrl of film.characters) {
       const characterResponse = await request(characterUrl);
       const character = JSON.parse(characterResponse.body);
