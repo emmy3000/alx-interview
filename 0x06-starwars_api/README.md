@@ -5,7 +5,6 @@
 This script retrieves and prints the names of characters from a Star Wars movie based on the Movie ID provided as a command-line argument. It utilizes the Star Wars API and the request module in Node.js.
 
 ## Usage
-
 **Prerequisites**
 
 Node.js installed on your machine(Node 10 as specificied).
