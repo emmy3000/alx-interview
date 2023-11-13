@@ -5,12 +5,18 @@
 This script retrieves and prints the names of characters from a Star Wars movie based on the Movie ID provided as a command-line argument. It utilizes the Star Wars API and the request module in Node.js.
 
 ## Usage
+
 **Prerequisites**
 
-Node.js installed on your machine(Node 10 as specificied).
+- Node.js installed on your machine.
 ```shell
 $ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
+```
+
+- Install JavaScript Semi-Standard Style
+```shell
+npm install semistandard --global
 ```
 
 ### How to Run
@@ -32,7 +38,7 @@ cd 0x06-star-wars-api
 - The integer value 3 equates to the movie title called "Return of the Jedi".
 
 **OUTPUT**
-- This command will output the names of characters from the movie with ID 3.
+- The command will output the names of characters from the movie with ID 3.
 ```shell
 $ ./0-starwars_characters.js "Return of the Jedi"
 Luke Skywalker
