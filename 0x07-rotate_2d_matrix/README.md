@@ -1,12 +1,10 @@
 # 0x07. Rotate 2D Matrix
 
-This project provides a Python implementation for rotating a given n x n 2D matrix 90 degrees clockwise in-place. The main script, `0-rotate_2d_matrix.py`, contains the implementation, while testing is carried out in the `main_0.py` module.
+This project provides a Python implementation for rotating an n x n 2D matrix 90 degrees clockwise in-place. The core functionality resides in the `0-rotate_2d_matrix.py` script, while testing is demonstrated in `main_0.py`.
 
 ## Implementation Details
 
 ### Function Definition (`0-rotate_2d_matrix.py`):
-
-The core functionality is implemented in the `rotate_2d_matrix` function. Key points about the implementation include:
 
 **Function Signature:**
 
@@ -16,23 +14,26 @@ def rotate_2d_matrix(matrix):
 
 **Description:**
 
-Rotate a given n x n 2D matrix 90 degrees clockwise in-place.
+- Rotate a given n x n 2D matrix 90 degrees clockwise in-place.
 
 **Parameters:**
 
-`matrix` (list of lists): Input matrix to be rotated.
+- `matrix` (list of lists): The input matrix to be rotated.
 
 **Algorithm:**
 
 The implementation follows a two-step process:
-- Transpose the matrix (swap rows with columns).
-- Reverse each row to obtain the final rotated matrix.
+
+1. **Transpose the Matrix (Swap Rows with Columns):**
+- Iterate through each element, swapping elements across the main diagonal.
+
+2. **Reverse Each Row:**
+- Iterate through each row, reversing the elements to obtain the final rotated matrix.
 
 ### Test Module (`main_0.py`):
 
-Testing is performed in the `main_0.py` script. This module imports the `rotate_2d_matrix` function and applies it to a sample matrix. The expected output is then printed for verification.
+Testing is performed in the `main_0.py` script, which imports the `rotate_2d_matrix` function and applies it to a sample matrix. The expected output is then printed for verification.
 
-The main module definiton:
 ```python
 #!/usr/bin/python3
 """
@@ -49,7 +50,8 @@ if __name__ == "__main__":
     print(matrix)
 ```
 
-Expected output after main module's execution:
+Expected Output:
+
 ```shell
 $ ./main.py
 [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
@@ -59,22 +61,20 @@ $ ./main.py
 
 ### Adherence to Instructions:
 
-The implementation strictly adheres to the provided instructions:
-
 - The function is named `rotate_2d_matrix`.
-- It does not return anything but edits the matrix in-place.
-- It assumes the matrix has 2 dimensions and will not be empty.
+- It performs an in-place rotation without returning anything.
+- *Assumption*: The matrix has 2 dimensions and is not empty.
 
-### Edge Cases:
+### Handling Edge Cases:
 
 The implementation accounts for various edge cases:
 
 - Matrices of different sizes (3x3, 4x4, 2x2, 1x1).
-- In-place rotation is handled correctly for square matrices.
+- Ensures correct in-place rotation for square matrices.
 
 ### Space-Time Complexity:
 
-- *Time Complexity*: **O(N^2)** - The nested loops iterate through each element in the matrix.
+- *Time Complexity*: **O(N^2)** - Due to the nested loops iterating through each matrix element.
 - *Space Complexity*: **O(1)** - The rotation is performed in-place without using additional space.
 
 ## Workflow Breakdown:
@@ -86,6 +86,14 @@ The implementation accounts for various edge cases:
 *Reverse Each Row*:
 
 - Iterate through each row, reversing the elements to achieve the final rotated matrix.
+
+## Conclusion
+
+In this project, we successfully implemented a Python function, `rotate_2d_matrix`, to rotate an n x n 2D matrix 90 degrees clockwise in-place. The algorithm follows a two-step process: transposing the matrix by swapping rows with columns and then reversing each row. The script has been tested for various cases, including matrices of different sizes, and demonstrates adherence to given instructions.
+
+The algorithm's time complexity is O(N^2), where N is the size of the matrix, and it achieves this rotation in-place with a space complexity of O(1). The workflow breakdown provides a clear overview of the steps involved.
+
+Overall, the implementation addresses edge cases, strictly follows instructions, and provides an efficient solution for matrix rotation.
 
 ## Author
 
