@@ -82,11 +82,11 @@ The implementation accounts for various edge cases:
 
 *Transpose Matrix*:
 
-	- Iterate through each element, swapping elements across the main diagonal.
+- Iterate through each element, swapping elements across the main diagonal.
 
 *Reverse Each Row*:
 
-	- Iterate through each row, reversing the elements to achieve the final rotated matrix.
+- Iterate through each row, reversing the elements to achieve the final rotated matrix.
 
 ## Author
 
