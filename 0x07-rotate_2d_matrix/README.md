@@ -8,21 +8,21 @@ This project provides a Python implementation for rotating a given n x n 2D matr
 
 The core functionality is implemented in the `rotate_2d_matrix` function. Key points about the implementation include:
 
-*Function Signature*:
+**Function Signature:**
 
 ```python
 def rotate_2d_matrix(matrix):
 ```
 
-*Description*:
+**Description:**
 
 Rotate a given n x n 2D matrix 90 degrees clockwise in-place.
 
-*Parameters*:
+**Parameters:**
 
 `matrix` (list of lists): Input matrix to be rotated.
 
-*Algorithm*:
+**Algorithm:**
 
 The implementation follows a two-step process:
 - Transpose the matrix (swap rows with columns).
@@ -49,8 +49,7 @@ if __name__ == "__main__":
     print(matrix)
 ```
 
-
-Expected output:
+Expected output after main module's execution:
 ```shell
 $ ./main.py
 [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
@@ -58,7 +57,7 @@ $ ./main.py
 
 ## Important Considerations
 
-**Adherence to Instructions:**
+### Adherence to Instructions:
 
 The implementation strictly adheres to the provided instructions:
 
@@ -66,14 +65,14 @@ The implementation strictly adheres to the provided instructions:
 - It does not return anything but edits the matrix in-place.
 - It assumes the matrix has 2 dimensions and will not be empty.
 
-**Edge Cases:**
+### Edge Cases:
 
 The implementation accounts for various edge cases:
 
 - Matrices of different sizes (3x3, 4x4, 2x2, 1x1).
 - In-place rotation is handled correctly for square matrices.
 
-**Space-Time Complexity:**
+### Space-Time Complexity:
 
 - *Time Complexity*: **O(N^2)** - The nested loops iterate through each element in the matrix.
 - *Space Complexity*: **O(1)** - The rotation is performed in-place without using additional space.
