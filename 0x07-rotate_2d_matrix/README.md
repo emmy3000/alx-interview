@@ -4,35 +4,35 @@ This project provides a Python implementation for rotating a given n x n 2D matr
 
 ## Implementation Details
 
-**Function Definition** (`0-rotate_2d_matrix.py`):
+### Function Definition (`0-rotate_2d_matrix.py`):
 
 The core functionality is implemented in the `rotate_2d_matrix` function. Key points about the implementation include:
 
-1. Function Signature:
+*Function Signature*:
 
 ```python
 def rotate_2d_matrix(matrix):
 ```
 
-2. Description:
+*Description*:
 
 Rotate a given n x n 2D matrix 90 degrees clockwise in-place.
 
-3. Parameters:
+*Parameters*:
 
 `matrix` (list of lists): Input matrix to be rotated.
 
-4. Algorithm:
+*Algorithm*:
 
 The implementation follows a two-step process:
 - Transpose the matrix (swap rows with columns).
 - Reverse each row to obtain the final rotated matrix.
 
-**Test Module** (`main_0.py`):
+### Test Module (`main_0.py`):
 
 Testing is performed in the `main_0.py` script. This module imports the `rotate_2d_matrix` function and applies it to a sample matrix. The expected output is then printed for verification.
 
-- The main module definiton:
+The main module definiton:
 ```python
 #!/usr/bin/python3
 """
@@ -49,7 +49,8 @@ if __name__ == "__main__":
     print(matrix)
 ```
 
-- Expected output
+
+Expected output:
 ```shell
 $ ./main.py
 [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
@@ -77,13 +78,13 @@ The implementation accounts for various edge cases:
 - *Time Complexity*: **O(N^2)** - The nested loops iterate through each element in the matrix.
 - *Space Complexity*: **O(1)** - The rotation is performed in-place without using additional space.
 
-**Workflow Breakdown:**
+## Workflow Breakdown:
 
-1. *Transpose Matrix:*
+**Transpose Matrix:**
 	- Iterate through each element, swapping elements across the main diagonal.
-2. *Reverse Each Row:*
-	- Iterate through each row, reversing the elements to achieve the final rotated matrix.
 
+**Reverse Each Row:**
+	- Iterate through each row, reversing the elements to achieve the final rotated matrix.
 
 ## Author
 
