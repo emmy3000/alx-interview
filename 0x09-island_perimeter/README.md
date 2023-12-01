@@ -9,7 +9,7 @@ $ touch 0-island_perimeter.py
 $ chmod x+ 0-island_perimeter.py
 ```
 
-## Step 2: Understanding the Problem:
+## Step 2: Understanding the Problem
 
 1. The grid represents an island where 0 represents water and 1 represents land.
 
