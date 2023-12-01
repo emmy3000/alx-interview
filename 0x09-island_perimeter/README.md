@@ -38,20 +38,26 @@ def island_perimeter(grid):
 
     # Iterate through each row in the grid
     for i in range(len(grid)):
+
         # Iterate through each column in the current row
         for j in range(len(grid[0])):
+
             # Check if the current cell contains land (1)
             if grid[i][j] == 1:
-                # Check up: If the current cell is in the first row or the cell above is water, increment perimeter
+
+                # CHECK UP: If the current cell is in the first row or the cell above is water, increment perimeter
                 if i == 0 or grid[i - 1][j] == 0:
                     perimeter += 1
-                # Check down: If the current cell is in the last row or the cell below is water, increment perimeter
+
+                # CHECK DOWN: If the current cell is in the last row or the cell below is water, increment perimeter
                 if i == len(grid) - 1 or grid[i + 1][j] == 0:
                     perimeter += 1
-                # Check left: If the current cell is in the first column or the cell to the left is water, increment perimeter
+
+                # CHECK LEFT: If the current cell is in the first column or the cell to the left is water, increment perimeter
                 if j == 0 or grid[i][j - 1] == 0:
                     perimeter += 1
-                # Check right: If the current cell is in the last column or the cell to the right is water, increment perimeter
+
+                # CHECK RIGHT: If the current cell is in the last column or the cell to the right is water, increment perimeter
                 if j == len(grid[0]) - 1 or grid[i][j + 1] == 0:
                     perimeter += 1
 
