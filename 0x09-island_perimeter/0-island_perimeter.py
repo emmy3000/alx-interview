@@ -9,7 +9,7 @@ Description:
     described in a grid.
 
 Usage:
-    $ ./0-island_perimeter.py
+    ./0-island_perimeter.py
 
 Author:
     Emeka Emodi<emodiemeka@gmail.com>
