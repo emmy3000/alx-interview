@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Scriptname: 0-island_perimeter
+Script's name: 0-island_perimeter
 
 Title: Island Perimeter Calculator
 
