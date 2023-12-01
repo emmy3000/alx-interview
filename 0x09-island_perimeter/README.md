@@ -65,7 +65,6 @@ $ ./0-main.py
 **Expected Output:**
 
 ```bash
-$ ./0-main.py
 12
 ```
 
