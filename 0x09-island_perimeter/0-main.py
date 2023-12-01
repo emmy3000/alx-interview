@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 """
-0-main
+Script's name: 0-main
+
+Description:
+    - Entry to the program.
+    - Focused on testing the 'island_perimeter' function defined.
+
+Usage:
+    ./0-main.py
 """
 island_perimeter = __import__('0-island_perimeter').island_perimeter
 
