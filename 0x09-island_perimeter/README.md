@@ -54,7 +54,7 @@ def island_perimeter(grid):
     return perimeter
 ```
 
-## Step 5:Run the main script
+## Step 5: Run the main script
 
 After completing the function definition, run a test by executing main module `0-main.py` where the source code's functionality is imported for confirmation:
 
