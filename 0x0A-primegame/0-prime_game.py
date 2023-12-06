@@ -21,6 +21,7 @@ def is_prime(num):
             return False
     return True
 
+
 def isWinner(x, nums):
     """
     Determine the winner of a series of prime game rounds.
@@ -35,6 +36,7 @@ def isWinner(x, nums):
       (either "Maria" or "Ben"). If the winner cannot be determined,
       returns None.
     """
+
     def get_primes(n):
         """
         Generate a list of prime numbers up to n.
@@ -78,10 +80,10 @@ def isWinner(x, nums):
 
         maria_turn = True
         while can_make_move(round_nums, primes):
-            selected_prime = min([p for p in primes \
-                    if p in round_nums])
-            round_nums = [num for num in round_nums \
-                    if num % selected_prime != 0]
+            selected_prime = min([p for p in primes if p in round_nums])
+            round_nums = [
+                num for num in round_nums if num %
+                selected_prime != 0]
 
             if maria_turn:
                 maria_turn = False
