@@ -3,98 +3,50 @@
 Script: 0-prime_game
 """
 
-def is_prime(num):
-    """
-    Check if a given number is prime.
-
-    Args:
-    - num (int): The number to be checked for primality.
-
-    Returns:
-    - bool: True if the number is prime, False otherwise.
-    """
-    if num < 2:
-        return False
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
 
 def isWinner(x, nums):
     """
-    Determine the winner of a series of prime game rounds.
+    Determine the winner of the prime game for multiple rounds.
 
     Args:
     - x (int): The number of rounds to be played.
-    - nums (List[int]): An array of integers representing
-      the ending values (n) for each round.
+    - nums (List[int]): A list of integers representing
+      the upper limits for each round.
 
     Returns:
     - str or None: The name of the player who won the most rounds
-      (either "Maria" or "Ben"). If the winner cannot be determined,
-      returns None.
+    (either "Maria", "Ben") or None if it's a tie.
     """
-    def get_primes(n):
+    def is_prime(num):
         """
-        Generate a list of prime numbers up to n.
+        Check if a given number is prime.
 
         Args:
-        - n (int): The upper limit for generating prime numbers.
+        - num (int): The number to be checked.
 
         Returns:
-        - List[int]: A list of prime numbers up to n.
+        - bool: True if the number is prime, False otherwise.
         """
-        primes = []
-        for i in range(2, n + 1):
-            if is_prime(i):
-                primes.append(i)
-        return primes
-
-    def can_make_move(nums, primes):
-        """
-        Check if a player can make a move in the current round.
-
-        Args:
-        - nums (List[int]): The list of available numbers
-          in the current round.
-        - primes (List[int]): The list of prime numbers
-          for the current round.
-
-        Returns:
-        - bool: True if a move can be made, False otherwise.
-        """
-        for p in primes:
-            if p in nums:
-                return True
-        return False
+        if num < 2:
+            return False
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
 
     maria_wins = 0
     ben_wins = 0
 
-    for i in range(x):
-        round_nums = list(range(1, nums[i] + 1))
-        primes = get_primes(nums[i])
+    for round_num in range(x):
+        current_nums = list(range(1, nums[round_num] + 1))
 
-        # Exclude 0 from the list of primes
-        primes = [p for p in primes if p != 0]
+        while any(is_prime(num) for num in current_nums):
+            prime = min(num for num in current_nums if is_prime(num))
+            current_nums = [n for n in current_nums if n % prime != 0]
 
-        if not primes:
-            # No primes available for selection
-            ben_wins += 1
-        else:
-            maria_turn = True
-            while can_make_move(round_nums, primes):
-                selected_prime = min([p for p in primes \
-                        if p in round_nums])
-                round_nums = [num for num in round_nums \
-                        if num % selected_prime != 0]
-
-                if maria_turn:
-                    maria_turn = False
-                else:
-                    maria_turn = True
-
-            if maria_turn:
+        # If no prime nums left, the player can't make a move and win
+        if not any(is_prime(num) for num in current_nums):
+            if round_num % 2 == 0:
                 ben_wins += 1
             else:
                 maria_wins += 1
