@@ -9,8 +9,8 @@ of prime game rounds.
 
 def isWinner(x, nums):
     """
-    Determine the winner of the prime game for multiple
-    rounds.
+    Function determines the winner of the prime game
+    for multiple rounds.
 
     Args:
     - x (int): The number of rounds to be played.
@@ -51,8 +51,8 @@ def isWinner(x, nums):
 
 def remove_multiples_of_prime(primes, prime):
     """
-    Function modifies the input list by removing multiples
-    of the specified prime number.
+    Helper function modifies the input list by removing
+    multiples of the specified prime number.
 
     Args:
     - primes (List[int]): The list of numbers
