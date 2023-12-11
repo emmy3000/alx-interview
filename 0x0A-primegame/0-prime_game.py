@@ -51,7 +51,7 @@ def isWinner(x, nums):
 
 def remove_multiples_of_prime(primes, prime):
     """
-    Function modifies the input list to remove multiples
+    Function modifies the input list by removing multiples
     of the specified prime number.
 
     Args:
