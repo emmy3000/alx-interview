@@ -1,12 +1,16 @@
 #!/usr/bin/python3
 """
 Script: 0-prime_game
+
+Determine the most frequent winner in a series
+of prime game rounds.
 """
 
 
 def isWinner(x, nums):
     """
-    Determine the winner of the prime game for multiple rounds.
+    Determine the winner of the prime game for multiple
+    rounds.
 
     Args:
     - x (int): The number of rounds to be played.
@@ -14,8 +18,8 @@ def isWinner(x, nums):
       the upper limits for each round.
 
     Returns:
-    - str or None: The name of the player who won the most rounds
-    (either "Maria", "Ben") or None if it's a tie.
+    - str or None: The name of the player who won the most
+      rounds (either "Maria", "Ben") or None if it's a tie.
     """
     if x <= 0 or nums is None:
         return None
@@ -51,8 +55,10 @@ def remove_multiples_of_prime(primes, prime):
     of the specified prime number.
 
     Args:
-    - primes (List[int]): The list of numbers to remove multiples from.
-    - prime (int): The prime number whose multiples need to be removed.
+    - primes (List[int]): The list of numbers
+      to remove multiples from.
+    - prime (int): The prime number whose multiples
+      need to be removed.
 
     Returns:
     - None
