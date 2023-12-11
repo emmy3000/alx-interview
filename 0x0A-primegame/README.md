@@ -24,7 +24,7 @@ from 0-prime_game import isWinner
 print("Winner: {}".format(isWinner(3, [4, 5, 1])))
 ```
 
-## Example
+**Example:**
 
 Consider the following example:
 
@@ -34,7 +34,7 @@ from 0-prime_game import isWinner
 print("Winner: {}".format(isWinner(3, [4, 5, 1])))
 ```
 
-The output for this example is:
+*The output for this example is:*
 
 ```
 Winner: Ben
@@ -46,14 +46,27 @@ Winner: Ben
 
 Determine the winner of a series of prime game rounds.
 
-*Parameters*:
+*Parameters:*
 
 - `x` (int): The number of rounds to be played.
 - `nums` (List[int]): An array of integers representing the ending values (n) for each round.
 
-*Returns*:
+*Returns:*
 
 - `str` or `None`: The name of the player who won the most rounds (either "Maria" or "Ben"). If the winner cannot be determined, returns `None`.
+
+**`remove_multiples_of_prime(primes, prime)`**
+
+Function modifies the input list by removing multiples of the specified prime number.
+
+*Parameters:*
+
+- `primes` (List[int]): The list of numbers to remove multiples from.
+- `prime` (int): The prime number whose multiples need to be removed.
+
+*Returns:*
+
+- `None`
 
 ## Author
 
